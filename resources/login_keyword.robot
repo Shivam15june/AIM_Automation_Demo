@@ -9,8 +9,7 @@ ${PASSWORD_ID}      id=password
 ${LOGIN_BTN_ID}     id=login
 ${USERNAME}         test1
 ${PASSWORD}         123
-${USERS_LINK}       link=USERS
-${SAVE_BUTTON}      partial link text=Save
+${LOGOUT_LINK}      xpath=//a[@href="../process_logout.php?admin=1" and text()="Logout"]
 
 *** Keywords ***
 
@@ -19,6 +18,7 @@ Open Browser And Login
     Maximize Browser Window
     Enter Login Credentials
     Verify Login Successful
+    Validate Logout Link Present
     Capture Page Screenshot
 
 Enter Login Credentials
@@ -27,9 +27,12 @@ Enter Login Credentials
     Click Button  ${LOGIN_BTN_ID}
 
 Verify Login Successful
-    Wait Until Page Contains Element    ${USERS_LINK}    timeout=10s
     Page Should Not Contain    Invalid password
     Log    Logged in successfully
+
+Validate Logout Link Present
+    Wait Until Page Contains Element    ${LOGOUT_LINK}    timeout=10s
+    Log    Logout link is present on the page
 
 Close All Browserss
     Close Browser

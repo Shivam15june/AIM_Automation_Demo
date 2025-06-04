@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-04T11:58:58.331835" rpa="false" schemaversion="5">
+<suite id="s1" name="Add Channel" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\Add_Channel.robot">
+<kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:58:59.527569" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-04T11:58:59.526678" elapsed="16.122511"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-04T11:59:15.650324" elapsed="0.092089"/>
+</kw>
+<kw name="Enter Login Credentials" owner="login_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:15.747247" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T11:59:15.744501" elapsed="0.297629"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:16.044142" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T11:59:16.042926" elapsed="0.209754"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:16.254059" level="INFO">Clicking button 'id=login'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T11:59:16.253328" elapsed="2.660826"/>
+</kw>
+<status status="PASS" start="2025-06-04T11:59:15.743693" elapsed="3.171086"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_keyword">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${USERS_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-04T11:59:18.916431" elapsed="0.091082"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:19.055794" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<arg>Invalid password</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-06-04T11:59:19.008210" elapsed="0.048049"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-04T11:59:19.057038" level="INFO">Logged in successfully</msg>
+<arg>Logged in successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-04T11:59:19.056635" elapsed="0.000596"/>
+</kw>
+<status status="PASS" start="2025-06-04T11:59:18.915547" elapsed="0.141889"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:19.324009" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-04T11:59:19.057700" elapsed="0.266768"/>
+</kw>
+<status status="PASS" start="2025-06-04T11:58:59.517412" elapsed="19.807310"/>
+</kw>
+<test id="s1-t1" name="Add Channel Successfully" line="9">
+<kw name="Navigate To Add Channel Page" owner="Add_Channel">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:19.328330" level="INFO">Clicking element 'xpath=//a[normalize-space(.)='CHANNELS']'.</msg>
+<arg>${CHANNELS_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T11:59:19.327111" elapsed="0.285507"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:19.613864" level="INFO">Clicking element 'xpath=//span[img[@alt='Add channel'] and contains(text(), 'Add Channel')]'.</msg>
+<arg>${ADD_CHANNEL_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T11:59:19.613190" elapsed="0.288273"/>
+</kw>
+<status status="PASS" start="2025-06-04T11:59:19.326396" elapsed="0.575654"/>
+</kw>
+<kw name="Fill Add Channel Form" owner="Add_Channel">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:19.905658" level="INFO">Typing text 'Channel_Alif' into text field 'id=c_name'.</msg>
+<arg>${CHANNEL_NAME_INPUT}</arg>
+<arg>${channel_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T11:59:19.904777" elapsed="0.230666"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-06-04T11:59:20.156864" level="INFO">Selecting options from selection list 'id=video_e_id' by label ALif TX[1].</msg>
+<msg time="2025-06-04T11:59:20.690963" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-04T11:59:20.691882" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: ALif TX[1]; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</msg>
+<arg>${VIDEO1_DROPDOWN}</arg>
+<arg>${video1}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="FAIL" start="2025-06-04T11:59:20.136600" elapsed="0.571994">NoSuchElementException: Message: Could not locate element with visible text: ALif TX[1]; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>${VIDEO2_DROPDOWN}</arg>
+<arg>${video2}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-06-04T11:59:20.709498" elapsed="0.000393"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>${AUDIO_DROPDOWN}</arg>
+<arg>${audio}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-06-04T11:59:20.710406" elapsed="0.000334"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>${USB_DROPDOWN}</arg>
+<arg>${usb}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-06-04T11:59:20.711224" elapsed="0.000312"/>
+</kw>
+<arg>Channel_Alif</arg>
+<arg>ALif TX[1]</arg>
+<arg>ALif TX[2]</arg>
+<arg>Alif TX</arg>
+<arg>Alif TX</arg>
+<status status="FAIL" start="2025-06-04T11:59:19.902814" elapsed="0.809290">NoSuchElementException: Message: Could not locate element with visible text: ALif TX[1]; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
+</kw>
+<kw name="Set Channel Permissions" owner="Add_Channel">
+<status status="NOT RUN" start="2025-06-04T11:59:20.712839" elapsed="0.000300"/>
+</kw>
+<kw name="Save Channel" owner="Add_Channel">
+<status status="NOT RUN" start="2025-06-04T11:59:20.713652" elapsed="0.000290"/>
+</kw>
+<doc>Adds a new channel with required fields, sets permissions, and saves.</doc>
+<status status="FAIL" start="2025-06-04T11:59:19.324965" elapsed="1.389602">NoSuchElementException: Message: Could not locate element with visible text: ALif TX[1]; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-06-04T11:59:20.717053" elapsed="2.666013"/>
+</kw>
+<status status="FAIL" start="2025-06-04T11:58:58.378122" elapsed="25.005410"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Add Channel" id="s1" pass="0" fail="1" skip="0">Add Channel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
