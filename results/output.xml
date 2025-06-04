@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-03T14:53:48.630959" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\login.robot">
+<kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-03T14:53:49.286596" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-03T14:53:49.286013" elapsed="3.117088"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-03T14:53:52.403728" elapsed="0.070012"/>
+</kw>
+<kw name="Enter Login Credentials" owner="login_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T14:53:52.476250" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T14:53:52.475393" elapsed="0.292741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T14:53:52.769140" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T14:53:52.768548" elapsed="0.194508"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-03T14:53:52.964617" level="INFO">Clicking button 'id=login'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T14:53:52.963860" elapsed="0.445285"/>
+</kw>
+<status status="PASS" start="2025-06-03T14:53:52.474543" elapsed="0.934906"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_keyword">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${USERS_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-03T14:53:53.410956" elapsed="0.527755"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-06-03T14:53:53.990422" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<arg>Invalid password</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-06-03T14:53:53.939051" elapsed="0.051541"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-03T14:53:53.991326" level="INFO">Logged in successfully</msg>
+<arg>Logged in successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-03T14:53:53.990982" elapsed="0.000470"/>
+</kw>
+<status status="PASS" start="2025-06-03T14:53:53.409899" elapsed="0.581757"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-03T14:53:54.262515" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-03T14:53:53.991926" elapsed="0.270821"/>
+</kw>
+<status status="PASS" start="2025-06-03T14:53:49.284739" elapsed="4.978198"/>
+</kw>
+<test id="s1-t1" name="Login With Valid Username And Password" line="7">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-03T14:53:54.264718" level="INFO">Login test completed</msg>
+<arg>Login test completed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-03T14:53:54.264402" elapsed="0.000419"/>
+</kw>
+<doc>Login with test1 and 123</doc>
+<status status="PASS" start="2025-06-03T14:53:54.263148" elapsed="0.002077"/>
+</test>
+<kw name="Close All Browserss" owner="login_keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-03T14:53:54.267643" elapsed="2.636762"/>
+</kw>
+<status status="PASS" start="2025-06-03T14:53:54.267162" elapsed="2.637506"/>
+</kw>
+<status status="PASS" start="2025-06-03T14:53:48.635452" elapsed="8.269304"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

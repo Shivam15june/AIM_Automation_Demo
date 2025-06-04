@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-03T16:14:33.070238" rpa="false" schemaversion="5">
+<suite id="s1" name="Add User" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\Add_User.robot">
+<kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:33.824681" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-03T16:14:33.823542" elapsed="2.963958"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-03T16:14:36.792061" elapsed="0.127463"/>
+</kw>
+<kw name="Enter Login Credentials" owner="login_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:36.924032" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:36.922322" elapsed="0.291465"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:37.219555" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:37.218344" elapsed="0.267036"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:37.488873" level="INFO">Clicking button 'id=login'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:37.488265" elapsed="0.389872"/>
+</kw>
+<status status="PASS" start="2025-06-03T16:14:36.921142" elapsed="1.006074"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_keyword">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${USERS_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-03T16:14:37.928357" elapsed="0.312811"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:38.285992" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<arg>Invalid password</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-06-03T16:14:38.241804" elapsed="0.044358"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-03T16:14:38.290093" level="INFO">Logged in successfully</msg>
+<arg>Logged in successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-03T16:14:38.289708" elapsed="0.000514"/>
+</kw>
+<status status="PASS" start="2025-06-03T16:14:37.927838" elapsed="0.364651"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:38.646166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-83.png"&gt;&lt;img src="selenium-screenshot-83.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-03T16:14:38.292928" elapsed="0.353651"/>
+</kw>
+<status status="PASS" start="2025-06-03T16:14:33.822148" elapsed="4.829392"/>
+</kw>
+<test id="s1-t1" name="Add New User Successfully" line="9">
+<kw name="Navigate To Add User Page" owner="AddUser">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:38.656928" level="INFO">Clicking link 'link=USERS'.</msg>
+<arg>${USERS_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:38.655944" elapsed="0.558914"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_USER_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-03T16:14:39.220723" elapsed="0.069858"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:39.292502" level="INFO">Clicking element 'xpath=//*[@id="admin_body"]/div[2]/a'.</msg>
+<arg>${ADD_USER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:39.291652" elapsed="0.369088"/>
+</kw>
+<status status="PASS" start="2025-06-03T16:14:38.654767" elapsed="1.010609"/>
+</kw>
+<kw name="Fill Add User Form" owner="AddUser">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:39.669203" level="INFO">Typing text 'newuser12345670980' into text field 'id=u_username'.</msg>
+<arg>${NEW_USERNAME_ID}</arg>
+<arg>${new_user1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:39.668356" elapsed="0.246997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:39.920777" level="INFO">Typing text 'pass@123' into text field 'id=password'.</msg>
+<arg>${PASSWORD2_ID}</arg>
+<arg>${new_pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:39.919783" elapsed="0.178114"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:40.105917" level="INFO">Typing text 'pass@123' into text field 'id=password2'.</msg>
+<arg>${CONFIRM_PWD_ID}</arg>
+<arg>${new_pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:40.104913" elapsed="0.223829"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:40.334016" level="INFO">Clicking element 'xpath=//*[@id="add_all_channels"]'.</msg>
+<arg>${ADD_CHANNELS_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:40.333095" elapsed="0.216644"/>
+</kw>
+<arg>newuser12345670980</arg>
+<arg>pass@123</arg>
+<status status="PASS" start="2025-06-03T16:14:39.667032" elapsed="0.887357"/>
+</kw>
+<kw name="Save New User" owner="AddUser">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAVE_BUTTON_ID}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-03T16:14:40.557299" elapsed="0.070168"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:40.630279" level="INFO">Clicking element 'id=save_button'.</msg>
+<arg>${SAVE_BUTTON_ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-03T16:14:40.628665" elapsed="0.204743"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-06-03T16:14:51.467455" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-84.png"&gt;&lt;img src="selenium-screenshot-84.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-03T16:14:51.468004" level="FAIL">Text 'Saving changes ..' did not appear in 10 seconds.</msg>
+<arg>Saving changes ..</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-06-03T16:14:40.841034" elapsed="10.637080">Text 'Saving changes ..' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-06-03T16:14:51.483574" elapsed="0.000271"/>
+</kw>
+<status status="FAIL" start="2025-06-03T16:14:40.556026" elapsed="10.928639">Text 'Saving changes ..' did not appear in 10 seconds.</status>
+</kw>
+<doc>Creates a new user with basic fields and saves.</doc>
+<status status="FAIL" start="2025-06-03T16:14:38.652425" elapsed="12.834711">Text 'Saving changes ..' did not appear in 10 seconds.</status>
+</test>
+<kw name="Close All Browserss" owner="login_keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-03T16:14:51.501138" elapsed="2.693280"/>
+</kw>
+<status status="PASS" start="2025-06-03T16:14:51.500267" elapsed="2.695016"/>
+</kw>
+<status status="FAIL" start="2025-06-03T16:14:33.228679" elapsed="20.967113"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Add User" id="s1" pass="0" fail="1" skip="0">Add User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
