@@ -1,249 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-05T17:44:03.752039" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-06T16:06:25.271029" rpa="false" schemaversion="5">
 <suite id="s1" name="Session Connect Test" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\session_connect_test.robot">
 <kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:04.508664" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<msg time="2025-06-06T16:06:25.960162" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-05T17:44:04.508086" elapsed="5.006575"/>
+<status status="PASS" start="2025-06-06T16:06:25.959591" elapsed="4.534438"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-05T17:44:09.515522" elapsed="0.100558"/>
+<status status="PASS" start="2025-06-06T16:06:30.495102" elapsed="0.104065"/>
 </kw>
 <kw name="Enter Login Credentials" owner="login_keyword">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:09.619163" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
+<msg time="2025-06-06T16:06:30.602504" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
 <arg>${USERNAME_ID}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T17:44:09.617708" elapsed="0.300930"/>
+<status status="PASS" start="2025-06-06T16:06:30.600869" elapsed="0.299389"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:09.919642" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<msg time="2025-06-06T16:06:30.901997" level="INFO">Typing text '123' into text field 'id=password'.</msg>
 <arg>${PASSWORD_ID}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T17:44:09.919067" elapsed="0.186259"/>
+<status status="PASS" start="2025-06-06T16:06:30.900877" elapsed="0.221834"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:10.106152" level="INFO">Clicking button 'id=login'.</msg>
+<msg time="2025-06-06T16:06:31.125016" level="INFO">Clicking button 'id=login'.</msg>
 <arg>${LOGIN_BTN_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T17:44:10.105683" elapsed="6.668762"/>
+<status status="PASS" start="2025-06-06T16:06:31.123854" elapsed="6.686934"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:09.616924" elapsed="7.157902"/>
+<status status="PASS" start="2025-06-06T16:06:30.600025" elapsed="7.211126"/>
 </kw>
 <kw name="Verify Login Successful" owner="login_keyword">
 <kw name="Page Should Not Contain" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:16.842232" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<msg time="2025-06-06T16:06:37.884166" level="INFO">Current page does not contain text 'Invalid password'.</msg>
 <arg>Invalid password</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<status status="PASS" start="2025-06-05T17:44:16.775970" elapsed="0.066538"/>
+<status status="PASS" start="2025-06-06T16:06:37.812947" elapsed="0.071557"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:16.843512" level="INFO">Logged in successfully</msg>
+<msg time="2025-06-06T16:06:37.885825" level="INFO">Logged in successfully</msg>
 <arg>Logged in successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:16.843065" elapsed="0.000615"/>
+<status status="PASS" start="2025-06-06T16:06:37.885188" elapsed="0.000843"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:16.775372" elapsed="0.068610"/>
+<status status="PASS" start="2025-06-06T16:06:37.811644" elapsed="0.074710"/>
 </kw>
 <kw name="Validate Logout Link Present" owner="login_keyword">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LOGOUT_LINK}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-06-05T17:44:16.845028" elapsed="0.028189"/>
+<status status="PASS" start="2025-06-06T16:06:37.887651" elapsed="0.038142"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:16.874371" level="INFO">Logout link is present on the page</msg>
+<msg time="2025-06-06T16:06:37.927366" level="INFO">Logout link is present on the page</msg>
 <arg>Logout link is present on the page</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:16.873876" elapsed="0.000712"/>
+<status status="PASS" start="2025-06-06T16:06:37.926642" elapsed="0.001083"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:16.844468" elapsed="0.030399"/>
+<status status="PASS" start="2025-06-06T16:06:37.886978" elapsed="0.041326"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:17.187718" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-06T16:06:38.226240" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-05T17:44:16.875264" elapsed="0.312811"/>
+<status status="PASS" start="2025-06-06T16:06:37.929103" elapsed="0.297354"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:04.506462" elapsed="12.681944"/>
+<status status="PASS" start="2025-06-06T16:06:25.958296" elapsed="12.268351"/>
 </kw>
 <test id="s1-t1" name="Connect To Shared Mode Channel" line="11">
 <kw name="Show Receivers Section" owner="session_file">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:17.193865" level="INFO">Clicking element 'xpath=//*[@id="admin_top_nav_bar"]/ul/li[3]/a'.</msg>
+<msg time="2025-06-06T16:06:38.231047" level="INFO">Clicking element 'xpath=//*[@id="admin_top_nav_bar"]/ul/li[3]/a'.</msg>
 <arg>${RECEIVERS_TAB_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.193206" elapsed="0.360348"/>
+<status status="PASS" start="2025-06-06T16:06:38.230341" elapsed="0.392366"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${RECEIVERS_SECTION_HEADER}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.554108" elapsed="0.051636"/>
+<status status="PASS" start="2025-06-06T16:06:38.623314" elapsed="0.061829"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:17.606834" level="INFO">Receiver tab clicked and receiver section is visible</msg>
+<msg time="2025-06-06T16:06:38.686441" level="INFO">Receiver tab clicked and receiver section is visible</msg>
 <arg>Receiver tab clicked and receiver section is visible</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.606386" elapsed="0.000625"/>
+<status status="PASS" start="2025-06-06T16:06:38.685856" elapsed="0.000816"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:17.192299" elapsed="0.414972"/>
+<status status="PASS" start="2025-06-06T16:06:38.229203" elapsed="0.457842"/>
 </kw>
 <kw name="Click Channel Connect Icon" owner="session_file">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=${CONNECT_ICON_ID}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.609128" elapsed="0.046310"/>
+<status status="PASS" start="2025-06-06T16:06:38.689190" elapsed="0.047204"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:17.656795" level="INFO">Clicking element 'xpath=//span[@id='connect_link_1']//a'.</msg>
+<msg time="2025-06-06T16:06:38.738181" level="INFO">Clicking element 'xpath=//span[@id='connect_link_1']//a'.</msg>
 <arg>${CONNECT_ICON_LOCATOR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.656041" elapsed="0.319169"/>
+<status status="PASS" start="2025-06-06T16:06:38.737016" elapsed="0.337648"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:17.976282" level="INFO">Clicked on channel connect icon</msg>
+<msg time="2025-06-06T16:06:39.075889" level="INFO">Clicked on channel connect icon</msg>
 <arg>Clicked on channel connect icon</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.975809" elapsed="0.000676"/>
+<status status="PASS" start="2025-06-06T16:06:39.075396" elapsed="0.000799"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:17.608245" elapsed="0.368537"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-06T16:06:44.077595" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-06T16:06:39.076662" elapsed="5.001298"/>
 </kw>
-<kw name="Wait For Channel Modes" owner="session_file">
-<kw name="Get Mode Locator" owner="session_file">
-<kw name="Set Variable If" owner="BuiltIn">
-<msg time="2025-06-05T17:44:17.981082" level="INFO">${locator} = xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]</msg>
-<var>${locator}</var>
-<arg>'${MODE_NAME}' == 'SHARED'</arg>
-<arg>xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]</arg>
-<arg>'${MODE_NAME}' == 'PRIVATE'</arg>
-<arg>xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[2]</arg>
-<arg>'${MODE_NAME}' == 'Exclusive'</arg>
-<arg>xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[3]</arg>
-<arg>ELSE</arg>
-<arg>None</arg>
-<doc>Sets variable based on the given condition.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.980067" elapsed="0.001172"/>
+<status status="PASS" start="2025-06-06T16:06:38.688156" elapsed="5.390153"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${locator}' == 'None'</arg>
-<arg>Fail</arg>
-<arg>Unsupported session mode: ${MODE_NAME}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.981842" elapsed="0.000645"/>
+<kw name="Is Green Message Present" owner="session_file">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-06T16:06:44.393011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-06T16:06:44.393693" level="FAIL">Element with locator 'xpath=//div[@class='mb_green message_box' and text()='This receiver is not currently connected.']' not found.</msg>
+<arg>${GREEN_MSG_LOCATOR}</arg>
+<arg>timeout=2s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-06-06T16:06:44.080813" elapsed="0.328772">Element with locator 'xpath=//div[@class='mb_green message_box' and text()='This receiver is not currently connected.']' not found.</status>
+</kw>
+<msg time="2025-06-06T16:06:44.410307" level="INFO">${present} = False</msg>
+<var>${present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${GREEN_MSG_LOCATOR}</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-06T16:06:44.080237" elapsed="0.330215"/>
 </kw>
 <return>
-<value>${locator}</value>
-<status status="PASS" start="2025-06-05T17:44:17.982769" elapsed="0.000222"/>
+<value>${present}</value>
+<status status="PASS" start="2025-06-06T16:06:44.410784" elapsed="0.000249"/>
 </return>
-<msg time="2025-06-05T17:44:17.983575" level="INFO">${locator} = xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]</msg>
-<var>${locator}</var>
-<arg>${MODE_NAME}</arg>
-<status status="PASS" start="2025-06-05T17:44:17.979060" elapsed="0.004629"/>
+<msg time="2025-06-06T16:06:44.412380" level="INFO">${green_msg_present} = False</msg>
+<var>${green_msg_present}</var>
+<status status="PASS" start="2025-06-06T16:06:44.079307" elapsed="0.333232"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${locator}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-06-05T17:44:17.984132" elapsed="0.032143"/>
+<kw name="Is Yellow Message Present" owner="session_file">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-06T16:06:44.472081" level="INFO">Element 'xpath=//div[@class='mb_yellow message_box' and contains(text(), 'This receiver is currently connected to')]' is displayed.</msg>
+<arg>${YELLOW_MSG_LOCATOR}</arg>
+<arg>timeout=2s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-06T16:06:44.416850" elapsed="0.055536"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:18.018243" level="INFO">Channel modes loaded for mode: SHARED</msg>
-<arg>Channel modes loaded for mode: ${MODE_NAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.017603" elapsed="0.000842"/>
+<msg time="2025-06-06T16:06:44.472911" level="INFO">${present} = True</msg>
+<var>${present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${YELLOW_MSG_LOCATOR}</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-06T16:06:44.416247" elapsed="0.056780"/>
 </kw>
+<return>
+<value>${present}</value>
+<status status="PASS" start="2025-06-06T16:06:44.473303" elapsed="0.000195"/>
+</return>
+<msg time="2025-06-06T16:06:44.474071" level="INFO">${yellow_msg_present} = True</msg>
+<var>${yellow_msg_present}</var>
+<status status="PASS" start="2025-06-06T16:06:44.413658" elapsed="0.060523"/>
+</kw>
+<if>
+<branch type="IF" condition="${green_msg_present}">
+<kw name="Wait For Channel Modes" owner="session_file">
 <arg>${TARGET_MODE}</arg>
-<status status="PASS" start="2025-06-05T17:44:17.977819" elapsed="0.040896"/>
+<status status="NOT RUN" start="2025-06-06T16:06:44.475773" elapsed="0.000164"/>
 </kw>
 <kw name="Select Channel Mode" owner="session_file">
-<kw name="Get Mode Locator" owner="session_file">
-<kw name="Set Variable If" owner="BuiltIn">
-<msg time="2025-06-05T17:44:18.022472" level="INFO">${locator} = xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]</msg>
-<var>${locator}</var>
-<arg>'${MODE_NAME}' == 'SHARED'</arg>
-<arg>xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]</arg>
-<arg>'${MODE_NAME}' == 'PRIVATE'</arg>
-<arg>xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[2]</arg>
-<arg>'${MODE_NAME}' == 'Exclusive'</arg>
-<arg>xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[3]</arg>
-<arg>ELSE</arg>
-<arg>None</arg>
-<doc>Sets variable based on the given condition.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.021751" elapsed="0.000838"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${locator}' == 'None'</arg>
-<arg>Fail</arg>
-<arg>Unsupported session mode: ${MODE_NAME}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.023056" elapsed="0.000516"/>
-</kw>
-<return>
-<value>${locator}</value>
-<status status="PASS" start="2025-06-05T17:44:18.023806" elapsed="0.000180"/>
-</return>
-<msg time="2025-06-05T17:44:18.024706" level="INFO">${locator} = xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]</msg>
-<var>${locator}</var>
-<arg>${MODE_NAME}</arg>
-<status status="PASS" start="2025-06-05T17:44:18.020842" elapsed="0.004021"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:18.025989" level="INFO">Clicking element 'xpath=//*[@id="admin_body"]/table/tbody/tr[3]/td[4]/a[1]'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.025330" elapsed="0.331249"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:18.357760" level="INFO">Selected channel mode: SHARED</msg>
-<arg>Selected channel mode: ${MODE_NAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.357167" elapsed="0.000791"/>
-</kw>
 <arg>${TARGET_MODE}</arg>
-<status status="PASS" start="2025-06-05T17:44:18.019697" elapsed="0.338549"/>
+<status status="NOT RUN" start="2025-06-06T16:06:44.476561" elapsed="0.000145"/>
 </kw>
 <kw name="Confirm Mode Selected" owner="session_file">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-05T17:44:18.407533" level="INFO">Current page contains text 'Receivers'.</msg>
-<arg>${CONFIRMATION_TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.360998" elapsed="0.046843"/>
+<status status="NOT RUN" start="2025-06-06T16:06:44.477195" elapsed="0.000143"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-06-05T17:44:18.408823" level="INFO">Successfully connected to channel mode</msg>
-<arg>Successfully connected to channel mode</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.408379" elapsed="0.000622"/>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-06T16:06:44.477686" elapsed="0.000108"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:18.359576" elapsed="0.049689"/>
+<kw name="Verify Disconnect Link Present" owner="session_file">
+<status status="NOT RUN" start="2025-06-06T16:06:44.478243" elapsed="0.000128"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:17.188687" elapsed="1.221448"/>
+<status status="NOT RUN" start="2025-06-06T16:06:44.474950" elapsed="0.003549"/>
+</branch>
+<branch type="ELSE IF" condition="${yellow_msg_present}">
+<kw name="Fail Because Session Should Not Connect" owner="session_file">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-06-06T16:06:44.481294" level="FAIL">Session is already connected and should NOT connect again.</msg>
+<arg>Session is already connected and should NOT connect again.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-06-06T16:06:44.480351" elapsed="0.001350">Session is already connected and should NOT connect again.</status>
+</kw>
+<status status="FAIL" start="2025-06-06T16:06:44.479359" elapsed="0.002942">Session is already connected and should NOT connect again.</status>
+</kw>
+<status status="FAIL" start="2025-06-06T16:06:44.478688" elapsed="0.003943">Session is already connected and should NOT connect again.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Unexpected session status message: Neither green nor yellow message found.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-06-06T16:06:44.483553" elapsed="0.000225"/>
+</kw>
+<status status="NOT RUN" start="2025-06-06T16:06:44.482894" elapsed="0.001145"/>
+</branch>
+<status status="FAIL" start="2025-06-06T16:06:44.474823" elapsed="0.009521">Session is already connected and should NOT connect again.</status>
+</if>
+<status status="FAIL" start="2025-06-06T16:06:38.226942" elapsed="6.258798">Session is already connected and should NOT connect again.</status>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-06-05T17:44:18.413490" elapsed="2.915583"/>
+<status status="PASS" start="2025-06-06T16:06:44.491437" elapsed="3.072561"/>
 </kw>
-<status status="PASS" start="2025-06-05T17:44:03.757404" elapsed="17.571995"/>
+<status status="FAIL" start="2025-06-06T16:06:25.276882" elapsed="22.287445"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Session Connect Test" id="s1" pass="1" fail="0" skip="0">Session Connect Test</stat>
+<stat name="Session Connect Test" id="s1" pass="0" fail="1" skip="0">Session Connect Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-06-05T17:44:04.500570" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 46: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-06T16:06:25.949167" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 29: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-06T16:06:25.950106" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 33: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-06T16:06:25.951923" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 67: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>
