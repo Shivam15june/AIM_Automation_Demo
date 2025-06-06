@@ -1,232 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-04T12:28:53.967553" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-04T13:02:15.471788" rpa="false" schemaversion="5">
 <suite id="s1" name="Add Channel" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\Add_Channel.robot">
 <kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:28:54.638948" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<msg time="2025-06-04T13:02:16.191878" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-04T12:28:54.638310" elapsed="2.741012"/>
+<status status="PASS" start="2025-06-04T13:02:16.191223" elapsed="5.856501"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-04T12:28:57.384887" elapsed="0.073340"/>
+<status status="PASS" start="2025-06-04T13:02:22.054883" elapsed="0.100047"/>
 </kw>
 <kw name="Enter Login Credentials" owner="login_keyword">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:28:57.462028" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
+<msg time="2025-06-04T13:02:22.158734" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
 <arg>${USERNAME_ID}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:28:57.460606" elapsed="0.313571"/>
+<status status="PASS" start="2025-06-04T13:02:22.157337" elapsed="0.285312"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:28:57.780732" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<msg time="2025-06-04T13:02:22.447212" level="INFO">Typing text '123' into text field 'id=password'.</msg>
 <arg>${PASSWORD_ID}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:28:57.779163" elapsed="0.216860"/>
+<status status="PASS" start="2025-06-04T13:02:22.446126" elapsed="0.183778"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:28:58.001071" level="INFO">Clicking button 'id=login'.</msg>
+<msg time="2025-06-04T13:02:22.633177" level="INFO">Clicking button 'id=login'.</msg>
 <arg>${LOGIN_BTN_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:28:58.000054" elapsed="2.656741"/>
+<status status="PASS" start="2025-06-04T13:02:22.632602" elapsed="2.652480"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:28:57.459602" elapsed="3.201652"/>
+<status status="PASS" start="2025-06-04T13:02:22.156341" elapsed="3.135495"/>
 </kw>
 <kw name="Verify Login Successful" owner="login_keyword">
 <kw name="Page Should Not Contain" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:00.717808" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<msg time="2025-06-04T13:02:25.363383" level="INFO">Current page does not contain text 'Invalid password'.</msg>
 <arg>Invalid password</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<status status="PASS" start="2025-06-04T12:29:00.664071" elapsed="0.054066"/>
+<status status="PASS" start="2025-06-04T13:02:25.295253" elapsed="0.068298"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-04T12:29:00.723157" level="INFO">Logged in successfully</msg>
+<msg time="2025-06-04T13:02:25.366948" level="INFO">Logged in successfully</msg>
 <arg>Logged in successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-04T12:29:00.722516" elapsed="0.000846"/>
+<status status="PASS" start="2025-06-04T13:02:25.366517" elapsed="0.000563"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:29:00.662622" elapsed="0.064768"/>
+<status status="PASS" start="2025-06-04T13:02:25.293698" elapsed="0.076783"/>
 </kw>
 <kw name="Validate Logout Link Present" owner="login_keyword">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LOGOUT_LINK}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-06-04T12:29:00.729168" elapsed="0.024102"/>
+<status status="PASS" start="2025-06-04T13:02:25.371711" elapsed="0.020683"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-04T12:29:00.754972" level="INFO">Logout link is present on the page</msg>
+<msg time="2025-06-04T13:02:25.393337" level="INFO">Logout link is present on the page</msg>
 <arg>Logout link is present on the page</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-04T12:29:00.754338" elapsed="0.000888"/>
+<status status="PASS" start="2025-06-04T13:02:25.392986" elapsed="0.000464"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:29:00.728143" elapsed="0.031522"/>
+<status status="PASS" start="2025-06-04T13:02:25.371089" elapsed="0.025028"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:01.043576" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-04T13:02:25.673668" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-04T12:29:00.760144" elapsed="0.283671"/>
+<status status="PASS" start="2025-06-04T13:02:25.396571" elapsed="0.277333"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:28:54.636912" elapsed="6.410994"/>
+<status status="PASS" start="2025-06-04T13:02:16.189762" elapsed="9.486743"/>
 </kw>
 <test id="s1-t1" name="Add Channel Successfully" line="9">
 <kw name="Navigate To Add Channel Page" owner="Add_Channel">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:01.054644" level="INFO">Clicking element 'xpath=//a[normalize-space(.)='CHANNELS']'.</msg>
+<msg time="2025-06-04T13:02:25.679429" level="INFO">Clicking element 'xpath=//a[normalize-space(.)='CHANNELS']'.</msg>
 <arg>${CHANNELS_LINK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:01.053303" elapsed="0.296891"/>
+<status status="PASS" start="2025-06-04T13:02:25.678976" elapsed="0.254489"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:01.356324" level="INFO">Clicking element 'xpath=//span[img[@alt='Add channel'] and contains(text(), 'Add Channel')]'.</msg>
+<msg time="2025-06-04T13:02:25.939310" level="INFO">Clicking element 'xpath=//span[img[@alt='Add channel'] and contains(text(), 'Add Channel')]'.</msg>
 <arg>${ADD_CHANNEL_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:01.355124" elapsed="0.302210"/>
+<status status="PASS" start="2025-06-04T13:02:25.938383" elapsed="0.266467"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:29:01.051643" elapsed="0.609913"/>
+<status status="PASS" start="2025-06-04T13:02:25.678394" elapsed="0.529703"/>
 </kw>
 <kw name="Fill Add Channel Form" owner="Add_Channel">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:01.666568" level="INFO">Typing text 'Channel_Alif12' into text field 'id=c_name'.</msg>
+<msg time="2025-06-04T13:02:26.211736" level="INFO">Typing text 'Channel_Alif123' into text field 'id=c_name'.</msg>
 <arg>id=c_name</arg>
 <arg>${channel_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:01.665322" elapsed="0.245918"/>
+<status status="PASS" start="2025-06-04T13:02:26.211019" elapsed="0.218702"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>id=video_e_id</arg>
 <arg>${video1}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-06-04T12:29:01.915609" elapsed="0.048330"/>
+<status status="PASS" start="2025-06-04T13:02:26.434533" elapsed="0.047232"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:01.965084" level="INFO">Selecting options from selection list 'id=video_e_id' by label Alif TX [1].</msg>
+<msg time="2025-06-04T13:02:26.483834" level="INFO">Selecting options from selection list 'id=video_e_id' by label Alif TX [1].</msg>
 <arg>id=video_e_id</arg>
 <arg>${video1}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-06-04T12:29:01.964534" elapsed="0.241532"/>
+<status status="PASS" start="2025-06-04T13:02:26.482815" elapsed="0.180962"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>id=video1_e_id</arg>
 <arg>${video2}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.210991" elapsed="0.040280"/>
+<status status="PASS" start="2025-06-04T13:02:26.669689" elapsed="0.044838"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:02.252459" level="INFO">Selecting options from selection list 'id=video1_e_id' by label Alif TX [2].</msg>
+<msg time="2025-06-04T13:02:26.716456" level="INFO">Selecting options from selection list 'id=video1_e_id' by label Alif TX [2].</msg>
 <arg>id=video1_e_id</arg>
 <arg>${video2}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.251873" elapsed="0.211359"/>
+<status status="PASS" start="2025-06-04T13:02:26.715551" elapsed="0.185381"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>id=audio_e_id</arg>
 <arg>${audio}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.468098" elapsed="0.058688"/>
+<status status="PASS" start="2025-06-04T13:02:26.905568" elapsed="0.036504"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:02.528877" level="INFO">Selecting options from selection list 'id=audio_e_id' by label Alif TX.</msg>
+<msg time="2025-06-04T13:02:26.943998" level="INFO">Selecting options from selection list 'id=audio_e_id' by label Alif TX.</msg>
 <arg>id=audio_e_id</arg>
 <arg>${audio}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.527940" elapsed="0.192409"/>
+<status status="PASS" start="2025-06-04T13:02:26.943105" elapsed="0.146346"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>id=usb_e_id</arg>
 <arg>${usb}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.723837" elapsed="0.043037"/>
+<status status="PASS" start="2025-06-04T13:02:27.093784" elapsed="0.037033"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:02.767990" level="INFO">Selecting options from selection list 'id=usb_e_id' by label Alif TX [1].</msg>
+<msg time="2025-06-04T13:02:27.132808" level="INFO">Selecting options from selection list 'id=usb_e_id' by label Alif TX [1].</msg>
 <arg>id=usb_e_id</arg>
 <arg>${usb}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.767473" elapsed="0.183814"/>
+<status status="PASS" start="2025-06-04T13:02:27.131891" elapsed="0.133687"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PERMISSION_ALL_USERS}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-04T12:29:02.960318" elapsed="0.053464"/>
+<status status="PASS" start="2025-06-04T13:02:27.271367" elapsed="0.044400"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:03.014866" level="INFO">Clicking element 'xpath=//*[@id="add_all_users"]/img'.</msg>
+<msg time="2025-06-04T13:02:27.318266" level="INFO">Clicking element 'xpath=//*[@id="add_all_users"]/img'.</msg>
 <arg>${PERMISSION_ALL_USERS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:03.014374" elapsed="0.140874"/>
+<status status="PASS" start="2025-06-04T13:02:27.316925" elapsed="0.115152"/>
 </kw>
-<arg>Channel_Alif12</arg>
+<arg>Channel_Alif123</arg>
 <arg>Alif TX [1]</arg>
 <arg>Alif TX [2]</arg>
 <arg>Alif TX</arg>
 <arg>Alif TX [1]</arg>
-<status status="PASS" start="2025-06-04T12:29:01.663652" elapsed="1.494822"/>
+<status status="PASS" start="2025-06-04T13:02:26.209898" elapsed="1.228647"/>
 </kw>
 <kw name="Save Channel" owner="Add_Channel">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SAVE_BUTTON}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-04T12:29:03.161411" elapsed="0.044888"/>
+<status status="PASS" start="2025-06-04T13:02:27.446131" elapsed="0.035719"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:03.207579" level="INFO">Clicking element 'id=save_button'.</msg>
+<msg time="2025-06-04T13:02:27.484155" level="INFO">Clicking element 'id=save_button'.</msg>
 <arg>${SAVE_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:03.207076" elapsed="0.144629"/>
+<status status="PASS" start="2025-06-04T13:02:27.482928" elapsed="0.112205"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-04T12:29:08.355839" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-06-04T13:02:32.600986" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-04T12:29:03.355042" elapsed="5.001086"/>
+<status status="PASS" start="2025-06-04T13:02:27.599507" elapsed="5.001832"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:29:03.160358" elapsed="5.198972"/>
+<status status="PASS" start="2025-06-04T13:02:27.444149" elapsed="5.161497"/>
 </kw>
 <kw name="Validate Channel Saved" owner="Add_Channel">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:08.362610" level="INFO">Typing text 'Channel_Alif12' into text field 'id=filter_c_name'.</msg>
+<msg time="2025-06-04T13:02:32.609373" level="INFO">Typing text 'Channel_Alif123' into text field 'id=filter_c_name'.</msg>
 <arg>${FILTER_CHANNEL_INPUT}</arg>
 <arg>${channel_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:08.361583" elapsed="0.301562"/>
+<status status="PASS" start="2025-06-04T13:02:32.608500" elapsed="0.267521"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-04T12:29:08.668753" level="INFO">Clicking element 'id=filter_c_name_icon'.</msg>
+<msg time="2025-06-04T13:02:32.881103" level="INFO">Clicking element 'id=filter_c_name_icon'.</msg>
 <arg>${FILTER_CHANNEL_ICON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T12:29:08.667808" elapsed="0.267449"/>
+<status status="PASS" start="2025-06-04T13:02:32.880192" elapsed="0.267828"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-04T12:29:13.953891" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-06-04T13:02:38.154461" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-04T12:29:08.939559" elapsed="5.014755"/>
+<status status="PASS" start="2025-06-04T13:02:33.152928" elapsed="5.001916"/>
 </kw>
-<arg>Channel_Alif12</arg>
-<status status="PASS" start="2025-06-04T12:29:08.360532" elapsed="5.600203"/>
+<arg>Channel_Alif123</arg>
+<status status="PASS" start="2025-06-04T13:02:32.607345" elapsed="5.552391"/>
 </kw>
 <doc>Adds a new channel and validates it appears in the list.</doc>
-<status status="PASS" start="2025-06-04T12:29:01.049024" elapsed="12.913315"/>
+<status status="PASS" start="2025-06-04T13:02:25.676898" elapsed="12.487105"/>
 </test>
 <kw name="Close All Browserss" owner="login_keyword" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-06-04T12:29:13.987829" elapsed="2.993286"/>
+<status status="PASS" start="2025-06-04T13:02:38.190124" elapsed="2.944836"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:29:13.976178" elapsed="3.005828"/>
+<status status="PASS" start="2025-06-04T13:02:38.178546" elapsed="2.957307"/>
 </kw>
-<status status="PASS" start="2025-06-04T12:28:54.101462" elapsed="22.881058"/>
+<status status="PASS" start="2025-06-04T13:02:15.611390" elapsed="25.524983"/>
 </suite>
 <statistics>
 <total>

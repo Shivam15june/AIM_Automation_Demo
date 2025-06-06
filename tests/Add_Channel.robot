@@ -9,8 +9,8 @@ Suite Teardown    Close All Browserss
 Add Channel Successfully
     [Documentation]    Adds a new channel and validates it appears in the list.
     Navigate To Add Channel Page
-    Fill Add Channel Form    Channel_Alif12    Alif TX [1]    Alif TX [2]    Alif TX    Alif TX [1]
+    Fill Add Channel Form    Channel_Alif_new1    Alif TX [1]    Alif TX [2]    Alif TX    Alif TX [1]
     Save Channel
-    Validate Channel Saved    Channel_Alif12
+    Validate Channel Saved    Channel_Alif_new1
 
 
