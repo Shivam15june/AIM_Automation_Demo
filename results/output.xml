@@ -1,244 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-06T16:06:25.271029" rpa="false" schemaversion="5">
-<suite id="s1" name="Session Connect Test" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\session_connect_test.robot">
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-13T15:27:13.813977" rpa="false" schemaversion="5">
+<suite id="s1" name="Add Vdi" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\add_vdi.robot">
 <kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:25.960162" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<msg time="2025-06-13T15:27:14.047436" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-06T16:06:25.959591" elapsed="4.534438"/>
+<status status="PASS" start="2025-06-13T15:27:14.047231" elapsed="1.851234"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-06T16:06:30.495102" elapsed="0.104065"/>
+<status status="PASS" start="2025-06-13T15:27:15.898787" elapsed="0.033231"/>
 </kw>
 <kw name="Enter Login Credentials" owner="login_keyword">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:30.602504" level="INFO">Typing text 'test1' into text field 'id=username'.</msg>
+<msg time="2025-06-13T15:27:15.933056" level="INFO">Typing text 'test' into text field 'id=username'.</msg>
 <arg>${USERNAME_ID}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-06T16:06:30.600869" elapsed="0.299389"/>
+<status status="PASS" start="2025-06-13T15:27:15.932607" elapsed="0.093770"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:30.901997" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<msg time="2025-06-13T15:27:16.026926" level="INFO">Typing text '123' into text field 'id=password'.</msg>
 <arg>${PASSWORD_ID}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-06T16:06:30.900877" elapsed="0.221834"/>
+<status status="PASS" start="2025-06-13T15:27:16.026622" elapsed="0.054482"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:31.125016" level="INFO">Clicking button 'id=login'.</msg>
+<msg time="2025-06-13T15:27:16.081890" level="INFO">Clicking button 'id=login'.</msg>
 <arg>${LOGIN_BTN_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-06T16:06:31.123854" elapsed="6.686934"/>
+<status status="PASS" start="2025-06-13T15:27:16.081584" elapsed="0.046056"/>
 </kw>
-<status status="PASS" start="2025-06-06T16:06:30.600025" elapsed="7.211126"/>
+<status status="PASS" start="2025-06-13T15:27:15.932314" elapsed="0.195424"/>
 </kw>
 <kw name="Verify Login Successful" owner="login_keyword">
 <kw name="Page Should Not Contain" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:37.884166" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<msg time="2025-06-13T15:27:20.490007" level="INFO">Current page does not contain text 'Invalid password'.</msg>
 <arg>Invalid password</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<status status="PASS" start="2025-06-06T16:06:37.812947" elapsed="0.071557"/>
+<status status="PASS" start="2025-06-13T15:27:16.128012" elapsed="4.362062"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-06T16:06:37.885825" level="INFO">Logged in successfully</msg>
+<msg time="2025-06-13T15:27:20.490341" level="INFO">Logged in successfully</msg>
 <arg>Logged in successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-06T16:06:37.885188" elapsed="0.000843"/>
+<status status="PASS" start="2025-06-13T15:27:20.490216" elapsed="0.000157"/>
 </kw>
-<status status="PASS" start="2025-06-06T16:06:37.811644" elapsed="0.074710"/>
+<status status="PASS" start="2025-06-13T15:27:16.127871" elapsed="4.362559"/>
 </kw>
 <kw name="Validate Logout Link Present" owner="login_keyword">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LOGOUT_LINK}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-06-06T16:06:37.887651" elapsed="0.038142"/>
+<status status="PASS" start="2025-06-13T15:27:20.490651" elapsed="0.008102"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-06T16:06:37.927366" level="INFO">Logout link is present on the page</msg>
+<msg time="2025-06-13T15:27:20.499275" level="INFO">Logout link is present on the page</msg>
 <arg>Logout link is present on the page</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-06T16:06:37.926642" elapsed="0.001083"/>
+<status status="PASS" start="2025-06-13T15:27:20.499022" elapsed="0.000526"/>
 </kw>
-<status status="PASS" start="2025-06-06T16:06:37.886978" elapsed="0.041326"/>
+<status status="PASS" start="2025-06-13T15:27:20.490531" elapsed="0.009264"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:38.226240" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-13T15:27:20.659313" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-89.png"&gt;&lt;img src="selenium-screenshot-89.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-06T16:06:37.929103" elapsed="0.297354"/>
+<status status="PASS" start="2025-06-13T15:27:20.500125" elapsed="0.159317"/>
 </kw>
-<status status="PASS" start="2025-06-06T16:06:25.958296" elapsed="12.268351"/>
+<status status="PASS" start="2025-06-13T15:27:14.046393" elapsed="6.613275"/>
 </kw>
-<test id="s1-t1" name="Connect To Shared Mode Channel" line="11">
-<kw name="Show Receivers Section" owner="session_file">
+<test id="s1-t1" name="Add VDI Based On User Selection And Values" line="14">
+<kw name="Navigate To Add VDI Page" owner="add_vdi">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:38.231047" level="INFO">Clicking element 'xpath=//*[@id="admin_top_nav_bar"]/ul/li[3]/a'.</msg>
-<arg>${RECEIVERS_TAB_XPATH}</arg>
+<msg time="2025-06-13T15:27:20.660948" level="INFO">Clicking element 'xpath=//*[@id="admin_top_nav_bar"]/ul/li[4]/a'.</msg>
+<arg>xpath=//*[@id="admin_top_nav_bar"]/ul/li[4]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-06T16:06:38.230341" elapsed="0.392366"/>
+<status status="PASS" start="2025-06-13T15:27:20.660720" elapsed="0.164354"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${RECEIVERS_SECTION_HEADER}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-06T16:06:38.623314" elapsed="0.061829"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-06-06T16:06:38.686441" level="INFO">Receiver tab clicked and receiver section is visible</msg>
-<arg>Receiver tab clicked and receiver section is visible</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-06T16:06:38.685856" elapsed="0.000816"/>
-</kw>
-<status status="PASS" start="2025-06-06T16:06:38.229203" elapsed="0.457842"/>
-</kw>
-<kw name="Click Channel Connect Icon" owner="session_file">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=${CONNECT_ICON_ID}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-06T16:06:38.689190" elapsed="0.047204"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//a[@href="configure_vdi.php"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-13T15:27:20.825277" elapsed="0.009281"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:38.738181" level="INFO">Clicking element 'xpath=//span[@id='connect_link_1']//a'.</msg>
-<arg>${CONNECT_ICON_LOCATOR}</arg>
+<msg time="2025-06-13T15:27:20.835079" level="INFO">Clicking element 'xpath=//a[@href="configure_vdi.php"]'.</msg>
+<arg>xpath=//a[@href="configure_vdi.php"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-06T16:06:38.737016" elapsed="0.337648"/>
+<status status="PASS" start="2025-06-13T15:27:20.834784" elapsed="0.104950"/>
+</kw>
+<status status="PASS" start="2025-06-13T15:27:20.660376" elapsed="0.279446"/>
+</kw>
+<kw name="Add Selected VDI Using Given Data" owner="add_vdi">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-06-13T15:27:20.940773" level="INFO">Selecting options from selection list 'id=vdi_option_id' by label RDP.</msg>
+<arg>id=vdi_option_id</arg>
+<arg>${vdi_type}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-06-13T15:27:20.940464" elapsed="0.048297"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Fill RDP Details" owner="add_vdi">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-13T15:27:20.989962" level="INFO">Typing text 'rdp909' into text field 'id=r_name'.</msg>
+<arg>id=r_name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-13T15:27:20.989841" elapsed="0.044068"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-13T15:27:21.034887" level="INFO">Typing text '192.168.20.127' into text field 'id=r_ip'.</msg>
+<arg>id=r_ip</arg>
+<arg>${ip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-13T15:27:21.034162" elapsed="0.051718"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-13T15:27:21.086707" level="INFO">Typing text '80' into text field 'id=r_port'.</msg>
+<arg>id=r_port</arg>
+<arg>${port}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-13T15:27:21.086146" elapsed="0.048004"/>
+</kw>
+<arg>${vdi_data['name']}</arg>
+<arg>${vdi_data['ip']}</arg>
+<arg>${vdi_data['port']}</arg>
+<status status="PASS" start="2025-06-13T15:27:20.989189" elapsed="0.145179"/>
+</kw>
+<arg>'${vdi_type}' == 'RDP'</arg>
+<arg>Fill RDP Details</arg>
+<arg>${vdi_data['name']}</arg>
+<arg>${vdi_data['ip']}</arg>
+<arg>${vdi_data['port']}</arg>
+<arg>ELSE IF</arg>
+<arg>'${vdi_type}' == 'VNC'</arg>
+<arg>Fill VNC Details</arg>
+<arg>${vdi_data['name']}</arg>
+<arg>${vdi_data['ip']}</arg>
+<arg>${vdi_data['port']}</arg>
+<arg>ELSE IF</arg>
+<arg>'${vdi_type}' == 'HTML'</arg>
+<arg>Fill HTML Details</arg>
+<arg>${vdi_data['name']}</arg>
+<arg>${vdi_data['ip']}</arg>
+<arg>${vdi_data['port']}</arg>
+<arg>ELSE IF</arg>
+<arg>'${vdi_type}' == 'Terminal'</arg>
+<arg>Fill Terminal Details</arg>
+<arg>${vdi_data['name']}</arg>
+<arg>${vdi_data['ip']}</arg>
+<arg>${vdi_data['port']}</arg>
+<arg>ELSE IF</arg>
+<arg>'${vdi_type}' == 'Horizon'</arg>
+<arg>Fill Horizon Details</arg>
+<arg>${vdi_data['name']}</arg>
+<arg>${vdi_data['ip']}</arg>
+<arg>${vdi_data['port']}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-13T15:27:20.988913" elapsed="0.145597"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-13T15:27:21.135287" level="INFO">Clicking element 'id=save_button'.</msg>
+<arg>id=save_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-13T15:27:21.135071" elapsed="0.035379"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-13T15:27:24.171375" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-13T15:27:21.170638" elapsed="3.001000"/>
+</kw>
+<kw name="Validate VDI Creation Result" owner="add_vdi">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-06-13T15:27:24.300278" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-90.png"&gt;&lt;img src="selenium-screenshot-90.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-13T15:27:24.300412" level="FAIL">Page should have contained element 'xpath=//span[@class='message_box mb_red']' but did not.</msg>
+<arg>xpath=//span[@class='message_box mb_red']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2025-06-13T15:27:24.173655" elapsed="0.128905">Page should have contained element 'xpath=//span[@class='message_box mb_red']' but did not.</status>
+</kw>
+<msg time="2025-06-13T15:27:24.302680" level="INFO">${duplicate_error} = False</msg>
+<var>${duplicate_error}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=//span[@class='message_box mb_red']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-13T15:27:24.173339" elapsed="0.129362"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${duplicate_error}</arg>
+<arg>Fail</arg>
+<arg>A device with that IP, Port, service protocol and Domain Name already exists</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-13T15:27:24.302804" elapsed="0.000096"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-06T16:06:39.075889" level="INFO">Clicked on channel connect icon</msg>
-<arg>Clicked on channel connect icon</arg>
+<msg time="2025-06-13T15:27:24.303043" level="INFO">VDI "rdp909" successfully created.</msg>
+<arg>VDI "${expected_name}" successfully created.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-06T16:06:39.075396" elapsed="0.000799"/>
+<status status="PASS" start="2025-06-13T15:27:24.302963" elapsed="0.000105"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-06T16:06:44.077595" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-06T16:06:39.076662" elapsed="5.001298"/>
+<arg>${vdi_data['name']}</arg>
+<status status="PASS" start="2025-06-13T15:27:24.172089" elapsed="0.131017"/>
 </kw>
-<status status="PASS" start="2025-06-06T16:06:38.688156" elapsed="5.390153"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-13T15:27:24.303677" level="INFO">Successfully added RDP VDI with name: rdp909, IP: 192.168.20.127, Port: 80</msg>
+<arg>Successfully added ${vdi_type} VDI with name: ${vdi_data['name']}, IP: ${vdi_data['ip']}, Port: ${vdi_data['port']}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-13T15:27:24.303157" elapsed="0.000550"/>
 </kw>
-<kw name="Is Green Message Present" owner="session_file">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:44.393011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-06-06T16:06:44.393693" level="FAIL">Element with locator 'xpath=//div[@class='mb_green message_box' and text()='This receiver is not currently connected.']' not found.</msg>
-<arg>${GREEN_MSG_LOCATOR}</arg>
-<arg>timeout=2s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-06-06T16:06:44.080813" elapsed="0.328772">Element with locator 'xpath=//div[@class='mb_green message_box' and text()='This receiver is not currently connected.']' not found.</status>
+<arg>${VDI_TYPE}</arg>
+<arg>&amp;{VDI_DATA}</arg>
+<status status="PASS" start="2025-06-13T15:27:20.940094" elapsed="3.363655"/>
 </kw>
-<msg time="2025-06-06T16:06:44.410307" level="INFO">${present} = False</msg>
-<var>${present}</var>
-<arg>Element Should Be Visible</arg>
-<arg>${GREEN_MSG_LOCATOR}</arg>
-<arg>timeout=2s</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-06-06T16:06:44.080237" elapsed="0.330215"/>
-</kw>
-<return>
-<value>${present}</value>
-<status status="PASS" start="2025-06-06T16:06:44.410784" elapsed="0.000249"/>
-</return>
-<msg time="2025-06-06T16:06:44.412380" level="INFO">${green_msg_present} = False</msg>
-<var>${green_msg_present}</var>
-<status status="PASS" start="2025-06-06T16:06:44.079307" elapsed="0.333232"/>
-</kw>
-<kw name="Is Yellow Message Present" owner="session_file">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-06-06T16:06:44.472081" level="INFO">Element 'xpath=//div[@class='mb_yellow message_box' and contains(text(), 'This receiver is currently connected to')]' is displayed.</msg>
-<arg>${YELLOW_MSG_LOCATOR}</arg>
-<arg>timeout=2s</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-06-06T16:06:44.416850" elapsed="0.055536"/>
-</kw>
-<msg time="2025-06-06T16:06:44.472911" level="INFO">${present} = True</msg>
-<var>${present}</var>
-<arg>Element Should Be Visible</arg>
-<arg>${YELLOW_MSG_LOCATOR}</arg>
-<arg>timeout=2s</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-06-06T16:06:44.416247" elapsed="0.056780"/>
-</kw>
-<return>
-<value>${present}</value>
-<status status="PASS" start="2025-06-06T16:06:44.473303" elapsed="0.000195"/>
-</return>
-<msg time="2025-06-06T16:06:44.474071" level="INFO">${yellow_msg_present} = True</msg>
-<var>${yellow_msg_present}</var>
-<status status="PASS" start="2025-06-06T16:06:44.413658" elapsed="0.060523"/>
-</kw>
-<if>
-<branch type="IF" condition="${green_msg_present}">
-<kw name="Wait For Channel Modes" owner="session_file">
-<arg>${TARGET_MODE}</arg>
-<status status="NOT RUN" start="2025-06-06T16:06:44.475773" elapsed="0.000164"/>
-</kw>
-<kw name="Select Channel Mode" owner="session_file">
-<arg>${TARGET_MODE}</arg>
-<status status="NOT RUN" start="2025-06-06T16:06:44.476561" elapsed="0.000145"/>
-</kw>
-<kw name="Confirm Mode Selected" owner="session_file">
-<status status="NOT RUN" start="2025-06-06T16:06:44.477195" elapsed="0.000143"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-06-06T16:06:44.477686" elapsed="0.000108"/>
-</kw>
-<kw name="Verify Disconnect Link Present" owner="session_file">
-<status status="NOT RUN" start="2025-06-06T16:06:44.478243" elapsed="0.000128"/>
-</kw>
-<status status="NOT RUN" start="2025-06-06T16:06:44.474950" elapsed="0.003549"/>
-</branch>
-<branch type="ELSE IF" condition="${yellow_msg_present}">
-<kw name="Fail Because Session Should Not Connect" owner="session_file">
-<kw name="Fail" owner="BuiltIn">
-<msg time="2025-06-06T16:06:44.481294" level="FAIL">Session is already connected and should NOT connect again.</msg>
-<arg>Session is already connected and should NOT connect again.</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2025-06-06T16:06:44.480351" elapsed="0.001350">Session is already connected and should NOT connect again.</status>
-</kw>
-<status status="FAIL" start="2025-06-06T16:06:44.479359" elapsed="0.002942">Session is already connected and should NOT connect again.</status>
-</kw>
-<status status="FAIL" start="2025-06-06T16:06:44.478688" elapsed="0.003943">Session is already connected and should NOT connect again.</status>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" owner="BuiltIn">
-<arg>Unexpected session status message: Neither green nor yellow message found.</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2025-06-06T16:06:44.483553" elapsed="0.000225"/>
-</kw>
-<status status="NOT RUN" start="2025-06-06T16:06:44.482894" elapsed="0.001145"/>
-</branch>
-<status status="FAIL" start="2025-06-06T16:06:44.474823" elapsed="0.009521">Session is already connected and should NOT connect again.</status>
-</if>
-<status status="FAIL" start="2025-06-06T16:06:38.226942" elapsed="6.258798">Session is already connected and should NOT connect again.</status>
+<status status="PASS" start="2025-06-13T15:27:20.659733" elapsed="3.644448"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-06-06T16:06:44.491437" elapsed="3.072561"/>
+<status status="PASS" start="2025-06-13T15:27:24.315125" elapsed="3.364336"/>
 </kw>
-<status status="FAIL" start="2025-06-06T16:06:25.276882" elapsed="22.287445"/>
+<status status="PASS" start="2025-06-13T15:27:13.815760" elapsed="13.863933"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Session Connect Test" id="s1" pass="0" fail="1" skip="0">Session Connect Test</stat>
+<stat name="Add Vdi" id="s1" pass="1" fail="0" skip="0">Add Vdi</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-06-06T16:06:25.949167" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 29: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2025-06-06T16:06:25.950106" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 33: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2025-06-06T16:06:25.951923" level="WARN">Error in file 'C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\resources\session_file.robot' on line 67: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

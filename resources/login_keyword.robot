@@ -7,7 +7,7 @@ ${BROWSER}          chrome
 ${USERNAME_ID}      id=username
 ${PASSWORD_ID}      id=password
 ${LOGIN_BTN_ID}     id=login
-${USERNAME}         test1
+${USERNAME}         test
 ${PASSWORD}         123
 ${LOGOUT_LINK}      xpath=//a[@href="../process_logout.php?admin=1" and text()="Logout"]
 
