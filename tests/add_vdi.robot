@@ -8,7 +8,7 @@ Suite Teardown    Close All Browsers
 
 *** Variables ***
 ${VDI_TYPE}       RDP
-&{VDI_DATA}       name=rdp909   ip=192.168.20.127    port=80
+&{VDI_DATA}       name=rdp9119   ip=192.168.40.149    port=80
 
 *** Test Cases ***
 Add VDI Based On User Selection And Values

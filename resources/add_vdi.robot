@@ -33,6 +33,7 @@ Fill VNC Details
     Input Text    id=vnc_ip      ${ip}
     Input Text    id=vnc_port    ${port}
 
+
 Fill HTML Details
     [Arguments]    ${name}    ${url}    ${port}
     Input Text    id=h_name    ${name}

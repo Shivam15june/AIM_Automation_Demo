@@ -24,24 +24,24 @@ Fill Add Channel Form
     [Arguments]    ${channel_name}    ${video1}    ${video2}    ${audio}    ${usb}
     Input Text     id=c_name    ${channel_name}
 
-    Wait Until Element Contains    id=video_e_id    ${video1}    timeout=10s
+
     Select From List By Label     id=video_e_id    ${video1}
 
-    Wait Until Element Contains    id=video1_e_id    ${video2}    timeout=10s
+
     Select From List By Label     id=video1_e_id    ${video2}
 
-    Wait Until Element Contains    id=audio_e_id     ${audio}     timeout=10s
+
     Select From List By Label     id=audio_e_id     ${audio}
 
-    Wait Until Element Contains    id=usb_e_id       ${usb}       timeout=10s
+
     Select From List By Label     id=usb_e_id       ${usb}
 
-     Wait Until Element Is Visible    ${PERMISSION_ALL_USERS}    timeout=10s
+
     Click Element    ${PERMISSION_ALL_USERS}
 
 
 Save Channel
-    Wait Until Element Is Visible    ${SAVE_BUTTON}    timeout=10s
+
     Click Element     ${SAVE_BUTTON}
     Sleep    5s
 

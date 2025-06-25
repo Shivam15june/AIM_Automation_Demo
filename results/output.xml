@@ -1,228 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-13T15:27:13.813977" rpa="false" schemaversion="5">
-<suite id="s1" name="Add Vdi" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\add_vdi.robot">
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-24T15:13:30.767609" rpa="false" schemaversion="5">
+<suite id="s1" name="Channel Deltest" source="C:\Users\shivam.srivastava\PycharmProjects\aim_auto_robot\tests\channel_deltest.robot">
 <kw name="Open Browser And Login" owner="login_keyword" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:14.047436" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
+<msg time="2025-06-24T15:13:31.056686" level="INFO">Opening browser 'chrome' to base url 'http://192.168.20.1/login.php'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-13T15:27:14.047231" elapsed="1.851234"/>
+<status status="PASS" start="2025-06-24T15:13:31.056453" elapsed="1.959600"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-13T15:27:15.898787" elapsed="0.033231"/>
+<status status="PASS" start="2025-06-24T15:13:33.016324" elapsed="0.025339"/>
 </kw>
 <kw name="Enter Login Credentials" owner="login_keyword">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:15.933056" level="INFO">Typing text 'test' into text field 'id=username'.</msg>
+<msg time="2025-06-24T15:13:33.042791" level="INFO">Typing text 'test' into text field 'id=username'.</msg>
 <arg>${USERNAME_ID}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:15.932607" elapsed="0.093770"/>
+<status status="PASS" start="2025-06-24T15:13:33.042332" elapsed="0.101208"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:16.026926" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<msg time="2025-06-24T15:13:33.144162" level="INFO">Typing text '123' into text field 'id=password'.</msg>
 <arg>${PASSWORD_ID}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:16.026622" elapsed="0.054482"/>
+<status status="PASS" start="2025-06-24T15:13:33.143829" elapsed="0.082073"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:16.081890" level="INFO">Clicking button 'id=login'.</msg>
+<msg time="2025-06-24T15:13:33.226253" level="INFO">Clicking button 'id=login'.</msg>
 <arg>${LOGIN_BTN_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:16.081584" elapsed="0.046056"/>
+<status status="PASS" start="2025-06-24T15:13:33.226055" elapsed="4.502463"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:15.932314" elapsed="0.195424"/>
+<status status="PASS" start="2025-06-24T15:13:33.042012" elapsed="4.687059"/>
 </kw>
 <kw name="Verify Login Successful" owner="login_keyword">
 <kw name="Page Should Not Contain" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:20.490007" level="INFO">Current page does not contain text 'Invalid password'.</msg>
+<msg time="2025-06-24T15:13:37.761647" level="INFO">Current page does not contain text 'Invalid password'.</msg>
 <arg>Invalid password</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<status status="PASS" start="2025-06-13T15:27:16.128012" elapsed="4.362062"/>
+<status status="PASS" start="2025-06-24T15:13:37.730585" elapsed="0.031154"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-13T15:27:20.490341" level="INFO">Logged in successfully</msg>
+<msg time="2025-06-24T15:13:37.762151" level="INFO">Logged in successfully</msg>
 <arg>Logged in successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.490216" elapsed="0.000157"/>
+<status status="PASS" start="2025-06-24T15:13:37.761945" elapsed="0.000271"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:16.127871" elapsed="4.362559"/>
+<status status="PASS" start="2025-06-24T15:13:37.729837" elapsed="0.032520"/>
 </kw>
 <kw name="Validate Logout Link Present" owner="login_keyword">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${LOGOUT_LINK}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.490651" elapsed="0.008102"/>
+<status status="PASS" start="2025-06-24T15:13:37.762887" elapsed="0.008705"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-13T15:27:20.499275" level="INFO">Logout link is present on the page</msg>
+<msg time="2025-06-24T15:13:37.771941" level="INFO">Logout link is present on the page</msg>
 <arg>Logout link is present on the page</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.499022" elapsed="0.000526"/>
+<status status="PASS" start="2025-06-24T15:13:37.771796" elapsed="0.000201"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:20.490531" elapsed="0.009264"/>
+<status status="PASS" start="2025-06-24T15:13:37.762599" elapsed="0.009480"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:20.659313" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-89.png"&gt;&lt;img src="selenium-screenshot-89.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-24T15:13:37.943712" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.500125" elapsed="0.159317"/>
+<status status="PASS" start="2025-06-24T15:13:37.772194" elapsed="0.171667"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:14.046393" elapsed="6.613275"/>
+<status status="PASS" start="2025-06-24T15:13:31.055844" elapsed="6.888141"/>
 </kw>
-<test id="s1-t1" name="Add VDI Based On User Selection And Values" line="14">
-<kw name="Navigate To Add VDI Page" owner="add_vdi">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:20.660948" level="INFO">Clicking element 'xpath=//*[@id="admin_top_nav_bar"]/ul/li[4]/a'.</msg>
-<arg>xpath=//*[@id="admin_top_nav_bar"]/ul/li[4]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.660720" elapsed="0.164354"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>xpath=//a[@href="configure_vdi.php"]</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.825277" elapsed="0.009281"/>
+<test id="s1-t1" name="Delete And Search Channel" line="9">
+<kw name="Delete Channel By Name" owner="channel_del">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHANNEL_TAB}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T15:13:37.945280" elapsed="0.037217"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:20.835079" level="INFO">Clicking element 'xpath=//a[@href="configure_vdi.php"]'.</msg>
-<arg>xpath=//a[@href="configure_vdi.php"]</arg>
+<msg time="2025-06-24T15:13:37.983311" level="INFO">Clicking element 'xpath=//*[@id="admin_top_nav_bar"]/ul/li[2]/a'.</msg>
+<arg>${CHANNEL_TAB}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.834784" elapsed="0.104950"/>
+<status status="PASS" start="2025-06-24T15:13:37.982888" elapsed="0.195367"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:20.660376" elapsed="0.279446"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-24T15:13:38.178660" level="INFO">Navigated to Channel Tab</msg>
+<arg>Navigated to Channel Tab</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-24T15:13:38.178416" elapsed="0.000399"/>
 </kw>
-<kw name="Add Selected VDI Using Given Data" owner="add_vdi">
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:20.940773" level="INFO">Selecting options from selection list 'id=vdi_option_id' by label RDP.</msg>
-<arg>id=vdi_option_id</arg>
-<arg>${vdi_type}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.940464" elapsed="0.048297"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Fill RDP Details" owner="add_vdi">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:20.989962" level="INFO">Typing text 'rdp909' into text field 'id=r_name'.</msg>
-<arg>id=r_name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.989841" elapsed="0.044068"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:21.034887" level="INFO">Typing text '192.168.20.127' into text field 'id=r_ip'.</msg>
-<arg>id=r_ip</arg>
-<arg>${ip}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:21.034162" elapsed="0.051718"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:21.086707" level="INFO">Typing text '80' into text field 'id=r_port'.</msg>
-<arg>id=r_port</arg>
-<arg>${port}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:21.086146" elapsed="0.048004"/>
-</kw>
-<arg>${vdi_data['name']}</arg>
-<arg>${vdi_data['ip']}</arg>
-<arg>${vdi_data['port']}</arg>
-<status status="PASS" start="2025-06-13T15:27:20.989189" elapsed="0.145179"/>
-</kw>
-<arg>'${vdi_type}' == 'RDP'</arg>
-<arg>Fill RDP Details</arg>
-<arg>${vdi_data['name']}</arg>
-<arg>${vdi_data['ip']}</arg>
-<arg>${vdi_data['port']}</arg>
-<arg>ELSE IF</arg>
-<arg>'${vdi_type}' == 'VNC'</arg>
-<arg>Fill VNC Details</arg>
-<arg>${vdi_data['name']}</arg>
-<arg>${vdi_data['ip']}</arg>
-<arg>${vdi_data['port']}</arg>
-<arg>ELSE IF</arg>
-<arg>'${vdi_type}' == 'HTML'</arg>
-<arg>Fill HTML Details</arg>
-<arg>${vdi_data['name']}</arg>
-<arg>${vdi_data['ip']}</arg>
-<arg>${vdi_data['port']}</arg>
-<arg>ELSE IF</arg>
-<arg>'${vdi_type}' == 'Terminal'</arg>
-<arg>Fill Terminal Details</arg>
-<arg>${vdi_data['name']}</arg>
-<arg>${vdi_data['ip']}</arg>
-<arg>${vdi_data['port']}</arg>
-<arg>ELSE IF</arg>
-<arg>'${vdi_type}' == 'Horizon'</arg>
-<arg>Fill Horizon Details</arg>
-<arg>${vdi_data['name']}</arg>
-<arg>${vdi_data['ip']}</arg>
-<arg>${vdi_data['port']}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-06-13T15:27:20.988913" elapsed="0.145597"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-24T15:13:38.179752" level="INFO">${delete_xpath} = //tr[td[contains(text(), 'Channel_Alif_new93')]]//a[@class='delete_link tooltip'][img[@alt='Delete channel']]</msg>
+<var>${delete_xpath}</var>
+<arg>//tr[td[contains(text(), '${CHANNEL_NAME}')]]//a[@class='delete_link tooltip'][img[@alt='Delete channel']]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-24T15:13:38.179081" elapsed="0.000723"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:21.135287" level="INFO">Clicking element 'id=save_button'.</msg>
-<arg>id=save_button</arg>
+<msg time="2025-06-24T15:13:38.180425" level="INFO">Clicking element 'xpath=//tr[td[contains(text(), 'Channel_Alif_new93')]]//a[@class='delete_link tooltip'][img[@alt='Delete channel']]'.</msg>
+<arg>xpath=${delete_xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-13T15:27:21.135071" elapsed="0.035379"/>
+<status status="PASS" start="2025-06-24T15:13:38.180028" elapsed="0.083738"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-13T15:27:24.171375" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-06-24T15:13:40.265270" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-13T15:27:21.170638" elapsed="3.001000"/>
+<status status="PASS" start="2025-06-24T15:13:38.264139" elapsed="2.001318"/>
 </kw>
-<kw name="Validate VDI Creation Result" owner="add_vdi">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-06-13T15:27:24.300278" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-90.png"&gt;&lt;img src="selenium-screenshot-90.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-06-13T15:27:24.300412" level="FAIL">Page should have contained element 'xpath=//span[@class='message_box mb_red']' but did not.</msg>
-<arg>xpath=//span[@class='message_box mb_red']</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="FAIL" start="2025-06-13T15:27:24.173655" elapsed="0.128905">Page should have contained element 'xpath=//span[@class='message_box mb_red']' but did not.</status>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-24T15:13:40.266059" level="INFO">Clicking element 'id=delete_channel_confirm_link'.</msg>
+<arg>id=delete_channel_confirm_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T15:13:40.265733" elapsed="0.120839"/>
 </kw>
-<msg time="2025-06-13T15:27:24.302680" level="INFO">${duplicate_error} = False</msg>
-<var>${duplicate_error}</var>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=//span[@class='message_box mb_red']</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-06-13T15:27:24.173339" elapsed="0.129362"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${duplicate_error}</arg>
-<arg>Fail</arg>
-<arg>A device with that IP, Port, service protocol and Domain Name already exists</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-06-13T15:27:24.302804" elapsed="0.000096"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-24T15:13:42.388126" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-24T15:13:40.386935" elapsed="2.001592"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-13T15:27:24.303043" level="INFO">VDI "rdp909" successfully created.</msg>
-<arg>VDI "${expected_name}" successfully created.</arg>
+<msg time="2025-06-24T15:13:42.389906" level="INFO">Clicked Delete icon for channel: Channel_Alif_new93</msg>
+<arg>Clicked Delete icon for channel: ${CHANNEL_NAME}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-13T15:27:24.302963" elapsed="0.000105"/>
+<status status="PASS" start="2025-06-24T15:13:42.389190" elapsed="0.000907"/>
 </kw>
-<arg>${vdi_data['name']}</arg>
-<status status="PASS" start="2025-06-13T15:27:24.172089" elapsed="0.131017"/>
+<arg>Channel_Alif_new93</arg>
+<status status="PASS" start="2025-06-24T15:13:37.944918" elapsed="4.445455"/>
+</kw>
+<kw name="Search Channel After Deletion" owner="channel_del">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-24T15:13:42.391963" elapsed="0.031227"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T15:13:42.423484" elapsed="0.056989"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-24T15:13:42.481258" level="INFO">Typing text 'Channel_Alif_new93' into text field 'id=filter_c_name'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${CHANNEL_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-24T15:13:42.480708" elapsed="0.184979"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-24T15:13:42.666865" level="INFO">Sending key(s) ('ENTER',) to id=filter_c_name element.</msg>
+<msg time="2025-06-24T15:13:42.958426" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-06-24T15:13:42.958610" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-24T15:13:42.666052" elapsed="0.407801"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-24T15:13:45.075418" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-24T15:13:43.074584" elapsed="2.001101"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-06-13T15:27:24.303677" level="INFO">Successfully added RDP VDI with name: rdp909, IP: 192.168.20.127, Port: 80</msg>
-<arg>Successfully added ${vdi_type} VDI with name: ${vdi_data['name']}, IP: ${vdi_data['ip']}, Port: ${vdi_data['port']}</arg>
+<msg time="2025-06-24T15:13:45.076521" level="INFO">Searched for channel: Channel_Alif_new93</msg>
+<arg>Searched for channel: ${CHANNEL_NAME}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-06-13T15:27:24.303157" elapsed="0.000550"/>
+<status status="PASS" start="2025-06-24T15:13:45.076086" elapsed="0.000564"/>
 </kw>
-<arg>${VDI_TYPE}</arg>
-<arg>&amp;{VDI_DATA}</arg>
-<status status="PASS" start="2025-06-13T15:27:20.940094" elapsed="3.363655"/>
+<arg>Channel_Alif_new93</arg>
+<status status="PASS" start="2025-06-24T15:13:42.391349" elapsed="2.685504"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:20.659733" elapsed="3.644448"/>
+<doc>Deletes the given channel and searches it to confirm</doc>
+<status status="PASS" start="2025-06-24T15:13:37.944089" elapsed="7.133345"/>
 </test>
-<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-06-13T15:27:24.315125" elapsed="3.364336"/>
+<kw name="Close All Browserss" owner="login_keyword" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-24T15:13:45.080738" elapsed="2.621395"/>
 </kw>
-<status status="PASS" start="2025-06-13T15:27:13.815760" elapsed="13.863933"/>
+<status status="PASS" start="2025-06-24T15:13:45.080273" elapsed="2.622052"/>
+</kw>
+<status status="PASS" start="2025-06-24T15:13:30.769601" elapsed="16.932911"/>
 </suite>
 <statistics>
 <total>
@@ -231,7 +195,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Add Vdi" id="s1" pass="1" fail="0" skip="0">Add Vdi</stat>
+<stat name="Channel Deltest" id="s1" pass="1" fail="0" skip="0">Channel Deltest</stat>
 </suite>
 </statistics>
 <errors>
